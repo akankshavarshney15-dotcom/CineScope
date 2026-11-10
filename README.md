@@ -52,3 +52,16 @@ This project uses the [OMDb API](https://www.omdbapi.com/) to retrieve movie inf
 Akanksha Varshney
 
 GitHub: [@akankshavarshney15-dotcom](https://github.com/akankshavarshney15-dotcom)
+## 📸 Project Screenshots
+
+### Home Page
+![Home Page](assets/assets/home.png)
+
+### Search Results
+![Search Results](assets/assets/search-results.png)
+
+### Browse by Genre
+![Genre Results](assets/assets/genre-results.png)
+
+### Movie Details
+![Movie Details](assets/assets/movie-details.png)
