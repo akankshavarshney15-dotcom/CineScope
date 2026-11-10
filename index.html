@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CineScope | Movie Discovery</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+
+        <a href="#home" class="logo">
+            <span class="logo-icon">▶</span>
+            CineScope
+        </a>
+
+        <nav class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#genres">Explore</a>
+            <a href="#discover">Popular Picks</a>
+        </nav>
+
+        <a href="#home" class="nav-search">Find a movie ↗</a>
+
+    </header>
+
+
+    <main>
+
+        <!-- Hero Banner -->
+        <section class="hero-section" id="home">
+
+            <div class="hero-content">
+
+                <span class="hero-tag">YOUR MOVIE DESTINATION</span>
+
+                <h1>Discover your next <span>favourite film.</span></h1>
+
+                <p>Search. Explore. Enjoy.</p>
+
+                <div class="search-section">
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search movies by title..."
+                    >
+
+                    <button id="searchBtn">Search →</button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Genre Section -->
+        <section class="genre-section" id="genres">
+
+            <div class="section-heading">
+                <span class="section-tag">EXPLORE</span>
+                <h2>Browse by Genre</h2>
+            </div>
+
+            <div class="mood-options">
+
+                <button class="mood-btn">Action</button>
+                <button class="mood-btn">Comedy</button>
+                <button class="mood-btn">Romance</button>
+                <button class="mood-btn">Thriller</button>
+                <button class="mood-btn">Drama</button>
+                <button class="mood-btn">Sci-Fi</button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Movie Collection -->
+        <section class="discover-section" id="discover">
+
+            <div id="movieContainer"></div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <a href="#home" class="logo">
+            <span class="logo-icon">▶</span>
+            CineScope
+        </a>
+
+        <p>Made for movie lovers.</p>
+
+        <small>© 2026 CineScope | Movie data powered by OMDb API</small>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

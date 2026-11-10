@@ -1,0 +1,473 @@
+
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #090d16;
+    color: #f5f5f5;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+:root {
+    --background: #090d16;
+    --surface: #111a29;
+    --card: #152235;
+    --gold: #f3b53f;
+    --text: #f5f5f5;
+    --muted: #a5afbd;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    min-height: 76px;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    background: #090d16;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text);
+    font-size: 25px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.logo-icon {
+    color: var(--gold);
+    font-size: 25px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.nav-links a,
+.nav-search {
+    color: #d4d9e1;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-search:hover {
+    color: var(--gold);
+}
+
+.nav-search {
+    padding: 10px 17px;
+    border: 1px solid #354155;
+    border-radius: 8px;
+}
+
+
+/* =========================
+   HERO BANNER
+========================= */
+
+.hero-section {
+    margin: 35px auto 55px;
+    width: 84%;
+    min-height: 340px;
+    border-radius: 18px;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(7, 13, 25, 0.98) 0%,
+            rgba(10, 23, 40, 0.90) 55%,
+            rgba(10, 23, 40, 0.45) 100%
+        ),
+        linear-gradient(135deg, #203b58, #111a29);
+
+    border: 1px solid #293c54;
+}
+
+.hero-content {
+    padding: 55px;
+    max-width: 750px;
+}
+
+.hero-tag,
+.section-tag {
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.hero-content h1 {
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.15;
+    margin: 17px 0 12px;
+    max-width: 650px;
+}
+
+.hero-content h1 span {
+    color: var(--gold);
+}
+
+.hero-content p {
+    color: var(--muted);
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   SEARCH BAR
+========================= */
+
+.search-section {
+    display: flex;
+    gap: 12px;
+    max-width: 620px;
+}
+
+#searchInput {
+    flex: 1;
+    min-width: 0;
+    padding: 16px 19px;
+    background: #1b2b3d;
+    border: 1px solid #455970;
+    border-radius: 9px;
+    outline: none;
+    color: white;
+    font-size: 14px;
+}
+
+#searchInput::placeholder {
+    color: #aab5c2;
+}
+
+#searchInput:focus {
+    border-color: var(--gold);
+}
+
+#searchBtn {
+    padding: 0 25px;
+    background: var(--gold);
+    color: #171717;
+    border: none;
+    border-radius: 9px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#searchBtn:hover {
+    background: #ffd06b;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   GENRE SECTION
+========================= */
+
+.genre-section,
+.discover-section {
+    width: 84%;
+    margin: 0 auto 55px;
+}
+
+.section-heading {
+    margin-bottom: 18px;
+}
+
+.section-heading h2 {
+    font-size: 25px;
+    margin-top: 5px;
+}
+
+.mood-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.mood-btn {
+    padding: 10px 20px;
+    border: 1px solid #344257;
+    border-radius: 25px;
+    background: #141e2d;
+    color: #dce2eb;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.mood-btn:hover,
+.mood-btn.active {
+    background: var(--gold);
+    color: #111;
+    border-color: var(--gold);
+}
+
+
+/* =========================
+   MOVIE GRID
+========================= */
+
+.discover-section {
+    min-height: 250px;
+}
+
+#movieContainer h2 {
+    font-size: 25px;
+    margin-bottom: 22px;
+}
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.movie-card {
+    overflow: hidden;
+    background: var(--card);
+    border: 1px solid #29394e;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--gold);
+}
+
+.movie-poster {
+    display: block;
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    background: #1b293a;
+}
+
+.movie-info {
+    padding: 16px;
+}
+
+.movie-info h3 {
+    font-size: 17px;
+    margin-bottom: 7px;
+}
+
+.movie-info p {
+    color: var(--muted);
+    font-size: 13px;
+    margin: 6px 0;
+}
+
+.movie-info button {
+    margin-top: 12px;
+    padding: 9px 15px;
+    background: transparent;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.movie-info button:hover {
+    background: var(--gold);
+    color: #111;
+}
+
+
+/* =========================
+   MOVIE DETAILS
+========================= */
+
+#movieContainer > .movie-card {
+    display: flex;
+    gap: 25px;
+    padding: 20px;
+}
+
+#movieContainer > .movie-card .movie-poster {
+    width: 230px;
+    height: 340px;
+    flex-shrink: 0;
+    border-radius: 8px;
+}
+
+#movieContainer > .movie-card .movie-info {
+    padding: 10px 0;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    text-align: center;
+    padding: 35px 15px;
+    border-top: 1px solid #253044;
+    margin-top: 40px;
+}
+
+.footer .logo {
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.footer small {
+    color: #788496;
+    font-size: 11px;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 900px) {
+
+    .movie-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .hero-section,
+    .genre-section,
+    .discover-section {
+        width: 90%;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .navbar {
+        min-height: 65px;
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 14px 5%;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .nav-search {
+        font-size: 12px;
+    }
+
+    .hero-section {
+        min-height: 300px;
+        margin: 22px auto 40px;
+    }
+
+    .hero-content {
+        padding: 28px 22px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .search-section {
+        flex-direction: column;
+    }
+
+    #searchBtn {
+        min-height: 45px;
+    }
+
+    .genre-section,
+    .discover-section {
+        margin-bottom: 40px;
+    }
+
+    .section-heading h2,
+    #movieContainer h2 {
+        font-size: 22px;
+    }
+
+    .mood-options {
+        gap: 9px;
+    }
+
+    .mood-btn {
+        padding: 9px 15px;
+    }
+
+    .movie-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 13px;
+    }
+
+    .movie-poster {
+        height: 235px;
+    }
+
+    .movie-info {
+        padding: 11px;
+    }
+
+    .movie-info h3 {
+        font-size: 14px;
+    }
+
+    #movieContainer > .movie-card {
+        flex-direction: column;
+    }
+
+    #movieContainer > .movie-card .movie-poster {
+        width: 100%;
+        height: 350px;
+    }
+
+}
