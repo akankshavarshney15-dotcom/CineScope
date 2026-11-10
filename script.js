@@ -1,6 +1,6 @@
 
 // OMDb API Details
-const API_KEY = "1c3d3c9a";
+const API_KEY = "5c9ebbf9";
 const API_URL = "https://www.omdbapi.com/";
 
 // HTML Elements
