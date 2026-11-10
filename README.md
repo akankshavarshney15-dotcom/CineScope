@@ -25,7 +25,12 @@ CineScope is a movie discovery web application that helps users search for movie
 CineScope/
 │
 ├── assets/
-│   └── no-poster.png
+│   ├── assets/
+│   │   ├── home.png
+│   │   ├── search-results.png
+│   │   ├── genre-results.png
+│   │   ├── movie-details.png
+│   │   └── no-poster.png
 │
 ├── index.html
 ├── style.css
@@ -35,11 +40,12 @@ CineScope/
 
 ## 🚀 How to Run
 
-1. Download or clone this repository.
-2. Open the project folder in VS Code.
-3. Add your OMDb API key in `script.js`.
-4. Open `index.html` using Live Server.
-5. Search for your favourite movies!
+1. Clone or download this repository.
+2. Open the CineScope folder in VS Code.
+3. Get your API key from [OMDb API](https://www.omdbapi.com/apikey.aspx).
+4. Open `script.js` and add your API key in the `API_KEY` variable.
+5. Open `index.html` using the Live Server extension.
+6. Search for movies and explore different genres!
 
 ## 🔑 API Used
 
