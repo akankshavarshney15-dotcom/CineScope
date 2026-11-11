@@ -1,7 +1,5 @@
 
 // OMDb API Details
-const API_KEY = "YOUR_OMDB_API_KEY";
-const API_URL = "https://www.omdbapi.com/";
 
 // HTML Elements
 const searchInput = document.getElementById("searchInput");
@@ -58,9 +56,9 @@ const genreMovies = {
 
 // Fetch Movie by Title
 async function fetchMovie(title) {
-    const response = await fetch(
-        `${API_URL}?apikey=${API_KEY}&t=${encodeURIComponent(title)}`
-    );
+   const response = await fetch(
+    `/api/movies?${new URLSearchParams({ t: title })}`
+);
 
     const movie = await response.json();
 
@@ -161,9 +159,9 @@ async function searchMovies() {
 
     try {
 
-        const response = await fetch(
-            `${API_URL}?apikey=${API_KEY}&s=${encodeURIComponent(movieName)}`
-        );
+       const response = await fetch(
+    `/api/movies?${new URLSearchParams({ s: movieName })}`
+);
         if (!response.ok) {
     throw new Error("Network error: " + response.status);
         }
@@ -194,9 +192,12 @@ async function getMovieDetails(movieID) {
 
     try {
 
-        const response = await fetch(
-            `${API_URL}?apikey=${API_KEY}&i=${movieID}&plot=full`
-        );
+       const response = await fetch(
+    `/api/movies?${new URLSearchParams({
+        i: movieID,
+        plot: "full"
+    })}`
+);
 
         const movie = await response.json();
 

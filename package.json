@@ -1,0 +1,26 @@
+{
+  "name": "cinescope",
+  "version": "1.0.0",
+  "description": "CineScope is a movie discovery web application that helps users search for movies, explore different genres, and view detailed movie information using the OMDb API.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akankshavarshney15-dotcom/CineScope.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/akankshavarshney15-dotcom/CineScope/issues"
+  },
+  "homepage": "https://github.com/akankshavarshney15-dotcom/CineScope#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.10",
+    "express": "^5.3.0"
+  }
+}
