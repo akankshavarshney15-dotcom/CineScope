@@ -3,7 +3,7 @@
 CineScope is a movie discovery website built using HTML, CSS, and JavaScript. It allows users to search for movies, explore curated movie collections by genre, and view detailed movie information.
 
 ## 🌐 Live Demo
-[Visit CineScope](https://akankshavarshney15-dotcom.github.io/CineScope/)
+[Visit CineScope](https://cinescope-66w8.onrender.com/)
 
 ## ✨ Features
 - Search movies by title
